@@ -1,5 +1,4 @@
 #Requests.swift
----
 > Requests is the easiest way to make HTTP requests from Swift.
 
 ![logo](http://i.imgur.com/EL2tktf.png)
@@ -51,7 +50,6 @@ Requests.get("http://example.com", params: ["lang":"swift", "name": "john"], com
 Requests.post("http://example.com", params:["name": "john"], completion: {(response, error, data) in
         println("POST Complete!")
     })
-
 ```
 ##PUT
 ```swift
@@ -59,7 +57,6 @@ Requests.post("http://example.com", params:["name": "john"], completion: {(respo
 Requests.put("http://example.com", completion: {(response, error, data) in
         println("PUT Complete!")
     })
-    
 ```
 
 ##DELETE
