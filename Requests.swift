@@ -71,10 +71,9 @@ class Requests {
     //================================================================================
     private class func _makeRequest(method: String, url: String, params:[String: String]?, completion:(response: NSHTTPURLResponse!, error: NSError!, data: Requests.Data) -> Void) {
         
- 
         var queryString = ""
         
-        if (method == "GET" && params) {
+        if (method == "GET" && params != nil) {
             queryString += createParamsString(params!, isURLQueryString: true)
         }
         
@@ -92,7 +91,7 @@ class Requests {
         //else if post,put,delete add params to body as json or form url
         
         
-        if (params) {
+        if (params != nil) {
             if (method == "POST" || method == "PUT" || method == "DELETE") {
                 if (Requests.sharedInstance.paramsEncoding == ParamsEncoding.JSON) {
                     var error: NSError?
@@ -126,16 +125,16 @@ class Requests {
             var dataResp: Data = data as NSData
             let headers = httpResp?.allHeaderFields
             
-            if (httpResp?) {
+            if (httpResp != nil) {
                 completionResponse = httpResp!
             }
             
-            if (headers?) {
+            if (headers != nil) {
                 if (self.isJSON(headers!)) {
                     var error: NSError?
                     var dict: NSDictionary = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: &error) as NSDictionary
                     
-                    if (!error && dict !== nil) {
+                    if (error == nil && dict != nil) {
                         dataResp = dict
                     }
                 }
@@ -145,7 +144,7 @@ class Requests {
                 }
                 else if (self.isImage(headers!)) {
                     let image = UIImage(data: data as NSData)
-                    if (image !== nil) {
+                    if (image != nil) {
                         dataResp = image
                     }
                 }
@@ -173,7 +172,7 @@ class Requests {
         
         for contentType in contentTypes {
             if let responseContentType = headers["Content-Type"] as? String {
-                if (responseContentType.rangeOfString(contentType)) {
+                if (responseContentType.rangeOfString(contentType) != nil) {
                     containsContentType = true
                     
                 }
@@ -222,7 +221,7 @@ class Requests {
             let escapedValue = escapeString(value)
             
             if (isURLQueryString) {
-                if (!queryString.rangeOfString("?")) {
+                if (queryString.rangeOfString("?") == nil) {
                     queryString += "?\(escapedKey)=\(escapedValue)"
                 }
                 else {

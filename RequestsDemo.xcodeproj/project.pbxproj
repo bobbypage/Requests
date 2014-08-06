@@ -12,7 +12,8 @@
 		EFA050AB198CD5E600E43339 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFA050A9198CD5E600E43339 /* Main.storyboard */; };
 		EFA050AD198CD5E600E43339 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EFA050AC198CD5E600E43339 /* Images.xcassets */; };
 		EFA050B9198CD5E600E43339 /* RequestsDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA050B8198CD5E600E43339 /* RequestsDemoTests.swift */; };
-		EFA050C3198CD63600E43339 /* Requests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA050C2198CD63600E43339 /* Requests.swift */; };
+		EFA050CA198CD71B00E43339 /* Requests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA050C9198CD71B00E43339 /* Requests.swift */; };
+		EFA050CB198CD71B00E43339 /* Requests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA050C9198CD71B00E43339 /* Requests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -24,6 +25,13 @@
 			remoteInfo = RequestsDemo;
 		};
 		EFA050C4198CD6A300E43339 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EFA05098198CD5E600E43339 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EFA0509F198CD5E600E43339;
+			remoteInfo = RequestsDemo;
+		};
+		EFA050C6198CD6A300E43339 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = EFA05098198CD5E600E43339 /* Project object */;
 			proxyType = 1;
@@ -42,7 +50,7 @@
 		EFA050B2198CD5E600E43339 /* RequestsDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RequestsDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFA050B7198CD5E600E43339 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EFA050B8198CD5E600E43339 /* RequestsDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestsDemoTests.swift; sourceTree = "<group>"; };
-		EFA050C2198CD63600E43339 /* Requests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Requests.swift; path = ../RequestDemo/Requests.swift; sourceTree = "<group>"; };
+		EFA050C9198CD71B00E43339 /* Requests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Requests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,7 +74,7 @@
 		EFA05097198CD5E600E43339 = {
 			isa = PBXGroup;
 			children = (
-				EFA050C2198CD63600E43339 /* Requests.swift */,
+				EFA050C9198CD71B00E43339 /* Requests.swift */,
 				EFA050A2198CD5E600E43339 /* RequestsDemo */,
 				EFA050B5198CD5E600E43339 /* RequestsDemoTests */,
 				EFA050A1198CD5E600E43339 /* Products */,
@@ -152,6 +160,7 @@
 			dependencies = (
 				EFA050B4198CD5E600E43339 /* PBXTargetDependency */,
 				EFA050C5198CD6A300E43339 /* PBXTargetDependency */,
+				EFA050C7198CD6A300E43339 /* PBXTargetDependency */,
 			);
 			name = RequestsDemoTests;
 			productName = RequestsDemoTests;
@@ -219,7 +228,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EFA050C3198CD63600E43339 /* Requests.swift in Sources */,
+				EFA050CA198CD71B00E43339 /* Requests.swift in Sources */,
 				EFA050A8198CD5E600E43339 /* ViewController.swift in Sources */,
 				EFA050A6198CD5E600E43339 /* AppDelegate.swift in Sources */,
 			);
@@ -230,6 +239,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EFA050B9198CD5E600E43339 /* RequestsDemoTests.swift in Sources */,
+				EFA050CB198CD71B00E43339 /* Requests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -245,6 +255,11 @@
 			isa = PBXTargetDependency;
 			target = EFA0509F198CD5E600E43339 /* RequestsDemo */;
 			targetProxy = EFA050C4198CD6A300E43339 /* PBXContainerItemProxy */;
+		};
+		EFA050C7198CD6A300E43339 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EFA0509F198CD5E600E43339 /* RequestsDemo */;
+			targetProxy = EFA050C6198CD6A300E43339 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 

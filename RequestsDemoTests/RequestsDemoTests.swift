@@ -41,7 +41,7 @@ class RequestsDemoTests: XCTestCase {
         
         Requests.sharedInstance.additionalHeaders = ["X-Test":"Testing"]
         
-        Requests.get("http://httpbin.org/get", params: ["lang":"swifta", "name":"john"], completion: {(response, error, data) in
+        Requests.get("http://httpbin.org/get", params: ["lang":"swift", "name":"john"], completion: {(response, error, data) in
             
             XCTAssertEqual(response.statusCode, 200, "Status Code should return 200")
             
